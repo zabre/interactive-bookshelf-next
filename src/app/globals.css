@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --accent: #d4a853;
-}
-
 body {
   background-color: #0f0e0d;
   color: #f0ece4;
@@ -13,18 +9,11 @@ body {
   overflow-x: hidden;
 }
 
-.shelf-wood {
-  background: linear-gradient(to bottom, #5c3e25, #3b2a1a);
-  height: 16px;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-}
-
 .grain-overlay {
   pointer-events: none;
   position: fixed;
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
+  opacity: 0.03;
   z-index: 9999;
 }

@@ -12,19 +12,19 @@ export function Bookshelf() {
 
   return (
     <>
-      <div className="flex items-end gap-[3px]">
+      <div className="flex items-end gap-1" style={{ userSelect: 'none' }}>
         {books.map((book) => (
           <BookSpine
             key={book.id}
             book={book}
             isExpanded={hoveredId === book.id}
+            isAny={hoveredId !== null}
             onHover={() => setHoveredId(book.id)}
             onLeave={() => setHoveredId(null)}
             onSelect={() => setSelectedBook(book)}
           />
         ))}
       </div>
-      <div className="shelf-wood w-full" />
 
       <AnimatePresence>
         {selectedBook && (
