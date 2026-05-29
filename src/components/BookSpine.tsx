@@ -17,7 +17,7 @@ export function BookSpine({ book, isExpanded, onHover, onLeave, onSelect }: Prop
     <motion.div
       layoutId={`book-spine-${book.id}`}
       className="relative cursor-pointer rounded-sm overflow-hidden flex-shrink-0"
-      style={{ backgroundColor: book.spineColor }}
+      style={{ backgroundColor: book.spineColor, height: 300 }}
       animate={{
         width: isExpanded ? 200 : 44,
         y: isExpanded ? -8 : 0,
@@ -26,7 +26,6 @@ export function BookSpine({ book, isExpanded, onHover, onLeave, onSelect }: Prop
           : '2px 0 8px rgba(0,0,0,0.4)',
       }}
       transition={{ type: 'spring', stiffness: 320, damping: 32 }}
-      style={{ backgroundColor: book.spineColor, height: 300 }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
